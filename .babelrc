@@ -1,0 +1,12 @@
+{
+	"compact": false,
+	"presets":[
+		"es2015",
+		"es2017",
+		"stage-1"
+	],
+	"plugins":[
+		"transform-regenerator",
+		"transform-runtime"
+	]
+}

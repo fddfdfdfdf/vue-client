@@ -1,0 +1,137 @@
+//webpack 介绍
+https://www.webpackjs.com/
+https://webpack.js.org/configuration/
+//vue 介绍
+https://cn.vuejs.org/
+//webpack-dashboard
+webpack 命令视图
+//vue - router
+https://router.vuejs.org/zh/guide/#html
+//vue
+https://cn.vuejs.org/v2/api/#Vue-set
+//vuex
+https://vuex.vuejs.org/zh/api/#vuex-store
+https://vuex.vuejs.org/zh/guide/state.html
+
+
+if (module.hot) {
+    module.hot.accept('./router/index', function() {
+        component.$nextTick(()=>{
+            console.log("compontensUpdate")
+            component.$forceUpdate()
+        })
+    })
+}
+
+//vue 中提取css的方法
+可提取单个 CSS 的插件有两个，分别为 extract-text-webpack-plugin 和 mini-css-extract-plugin, 前者再配置一个 minimize 即可实现压缩功能，后者配置另一个插件 optimize-css-assets-webpack-plugin  即可实现压缩功能。
+//ui组件库
+http://www.cnblogs.com/opendigg/p/6513510.html
+
+
+1、基本用法：
+vue2.0提供了一个keep-alive组件用来缓存组件,避免多次加载相应的组件,减少性能消耗
+<keep-alive>
+<component>
+  <!-- 组件将被缓存 -->
+</component>
+</keep-alive>
+
+有时候 可能需要缓存整个站点的所有页面,而页面一般一进去都要触发请求的
+在使用keep-alive的情况下
+
+<keep-alive>
+    <router-view></router-view>
+</keep-alive>
+
+2.缓存部分页面或者组件
+
+(1)使用router.mate属性
+
+/*这是目前用的比较多的方式*/
+
+<keep-alive>
+    <router-view v-if="!$route.meta.notKeepAlive"></router-view>
+</keep-alive>
+<router-view v-if="$route.meta.notKeepAlive"></router-view>
+
+router设置:
+
+...
+  routes: [
+    { path: '/', redirect: '/index',  component: Index, mate: { keepAlive: true }},
+    {
+      path: '/common',
+      component: TestParent,
+      children: [
+        { path: '/test2', component: Test2, mate: { keepAlive: true } }
+      ]
+    }
+    ....
+    //表示index和test2都使用keep-alive
+
+(2).使用新增属性inlcude/exclude
+
+2.1.0后提供了include/exclude两个属性 可以针对性缓存相应的组件
+
+<!-- comma-delimited string -->
+<keep-alive include="a,b">
+  <component :is="view"></component>
+</keep-alive>
+<!-- regex (use v-bind) -->
+<keep-alive :include="/a|b/">
+  <component :is="view"></component>
+</keep-alive>
+<keep-alive :include="includedComponents">
+  <router-view></router-view>
+</keep-alive>
+includedComponents设置为变量，动态改变即可
+//Vue2.0 事件发射与接收(深层信息传递)
+https://blog.csdn.net/a5534789/article/details/53415201
+//vue 常用UI库
+https://blog.csdn.net/yelin042/article/details/79965600
+//element-ui
+http://element-cn.eleme.io/#/zh-CN/component/installation
+
+
+使用vue2.0+mintUI+axios+vue-router:https://github.com/Stevenzwzhai/vue-mobile-application
+
+使用vue2.0+elementUI+axios+vue-router:https://github.com/Stevenzwzhai/vue2.0-elementUI-axios-vueRouter
+
+
+//文本溢出
+overflow:hidden;
+text-overflow:ellipsis;
+white-space:nowrap;
+
+
+//多行
+
+display:-webkit-box;
+-webkit-box-orient:vertical;
+-webkit-line-clamp:3;
+overflow:hidden;
+
+
+
+
+element-ui balbelrc
+{
+	"compact": false,
+	"presets":[
+		"es2015",
+		"es2017",
+		"stage-1"
+	],
+	"plugins":[
+		[
+			"component",
+			{
+				"libraryName": "element-ui",
+				"styleLibraryName": "theme-chalk"
+			}
+		],
+		"transform-regenerator",
+		"transform-runtime"
+	]
+}
