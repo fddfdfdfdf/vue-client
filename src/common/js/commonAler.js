@@ -63,6 +63,34 @@ function isLogin(th) {
     console.log(th.$store)
 }
 
+function judeCss(dom,fun){
+    function whichTransitionEvent(){
+        var t;
+        var el = document.createElement('fakeelement');
+        var transitions = {
+            'transition':'transitionend',
+            'OTransition':'oTransitionEnd',
+            'MozTransition':'transitionend',
+            'WebkitTransition':'webkitTransitionEnd',
+
+            'animationstart':'animationend',
+            'webkitAnimationStart':'webkitAnimationEnd',
+            'MSAnimationStart':'MSAnimationEnd',
+        }
+        for(t in transitions){
+            if( el.style[t] !== undefined ){
+                return transitions[t];
+            }
+        }
+    }
+    var transitionEvent = whichTransitionEvent();
+    transitionEvent && dom.addEventListener(transitionEvent,function() {
+        fun()
+    });
+}
+
+
+
 export {
     alertError,
     goHistory,
@@ -70,6 +98,7 @@ export {
     clearSession,
     goHistoryBc,
     clearPiker,
-    isLogin
+    isLogin,
+    judeCss
 }
 
