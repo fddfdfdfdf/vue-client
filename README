@@ -144,6 +144,9 @@ scrollReveal.js演示2
 WOW.js 依赖 animate.css，所以它支持 animate.css 多达 60 多种的动画效果，能满足您的各种需求。
 animation.css
 
+//aos.js超赞页面滚动元素动画jQuery动画库
+http://www.jq22.com/demo/jQueryAos.js20160626/
+
 
 
 //node 的多进程、多线程 cluster
@@ -174,4 +177,6 @@ if(cluster.isMaster){
 
 // 服务器监听文件自动重启
 
-   Supervisor  nodemon
+   Supervisor  nodemon 、hotnode、forever、pm2
+
+//https://www.jianshu.com/p/e709b71f12da
