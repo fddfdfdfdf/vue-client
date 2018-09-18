@@ -19,13 +19,24 @@
     <script type="text/javascript">var u = navigator.userAgent,isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;function addElementMeta(name,content) {var head =  document.getElementsByTagName('head')[0], meta = document.createElement('meta');meta.setAttribute('name', name);meta.setAttribute('content',content);head.appendChild(meta);};if(isAndroid){addElementMeta('x5-fullscreen','true');addElementMeta('x5-page-mode','app');}</script>
     <meta name="description" content="" />
     <meta name="Keywords" content="" />
-    <style type="text/css">@import  url(/css/all.css)</style>
+    <style type="text/css">
+        @import  url(/css/all.css);
+        * { margin: 0; padding: 0;}
+        .dowebok { font-family: "Microsoft Yahei";}
+        .dowebok h1 { margin: 60px 0 30px; font-size: 60px; font-weight: 500; text-align: center;}
+        .dowebok-explain { margin-bottom: 80px; font-size: 14px; text-align: center;}
+        .dowebok .list { width: 1064px; margin: 0 auto; overflow: hidden; zoom: 1;}
+        .dowebok .list ul { float: left; width: 246px; margin: 0 10px; list-style-type: none;}
+        .dowebok .list li { margin-bottom: 20px;}
+        .dowebok .list img { width: 100%; border-radius: 5px; vertical-align: top;}
+    </style>
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
     <script type="text/javascript">var initObj = {Baseurl:"/",loginTime:new Date(),aeb929f2e0:false}</script>
     <script type="text/javascript" src="/js/jweixin-1.0.0.js"></script>
+    <script src="http://cdn.dowebok.com/134/js/scrollReveal.js"></script>
 </head>
-<body>
-<div id="app"></div>
+<body  class="dowebok">
+<div id="app" ></div>
 </body>
 </html>
 

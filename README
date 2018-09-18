@@ -138,7 +138,10 @@ element-ui balbelrc
 
 //过度动画效果
 http://www.dowebok.com/demo/134/index2.html
-scrollReveal.js演示2
+//scrollReveal.js演示2
+
+http://www.dowebok.com/134.html
+
 //css 动画
 有的页面在向下滚动的时候，有些元素会产生细小的动画效果。虽然动画比较小，但却能吸引你的注意。比如刚刚发布的 iPhone 6 的页面（查看）。如果你希望你的页面也更加有趣，那么你可以试试 WOW.js。
 WOW.js 依赖 animate.css，所以它支持 animate.css 多达 60 多种的动画效果，能满足您的各种需求。
