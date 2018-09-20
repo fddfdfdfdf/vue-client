@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pageContain">
           <keep-alive>
               <router-view class="dd" v-if="$route.meta.keepAlive"></router-view>
           </keep-alive>

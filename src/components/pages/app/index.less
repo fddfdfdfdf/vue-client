@@ -1,0 +1,145 @@
+.app{
+  width: 100%;
+  height: 100%;
+  .appActions{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    &>img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .appActions{
+    .appload{
+      position: fixed;
+      bottom: 35%;
+      left: 0;
+      font-size: 20px;
+      &>div{
+        width: 7.5rem;
+        max-width: 7.5rem;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .appUploadBtn{
+         margin-top: 2%;
+         &>a{
+           display: inline-block;
+           background: #F96772;
+           border-radius: 5px;
+           vertical-align: top;
+           width: 3rem;
+           height: .9rem;
+           color: #fff;
+           line-height: .9rem;
+         }
+        &>span:first-child{
+          margin-right: .3rem;
+        }
+      }
+      .appHead{
+        font-size: .36rem;
+        color: #F96772;
+        letter-spacing: -0.22px;
+        text-align: center;
+      }
+    //  箭头
+      .appUploadTrue{
+        width: .5rem;
+        color: #FFB8C3;
+        height: .4rem;
+        position: relative;
+        left: 0;
+        top: .2rem;
+        &>div{
+           position: relative;
+           left: 0;
+          &:after{
+            position: absolute;
+            left: 4px;
+            top: 0;
+            content: "";
+            width: .25rem;
+            height:.06rem;
+            background: #FFB8C3;
+            transform: rotate(45deg);
+          }
+          &:before{
+            position: absolute;
+            right: 1px;
+            transform: rotate(-45deg);
+            top: 0;
+            content: "";
+            width: .25rem;
+            height:.06rem;
+            background:#FFB8C3 ;
+          }
+        }
+        &>div:first-child{
+          top: 0.4rem;
+        }
+        &>div:last-child{
+          top: .6rem;
+        }
+      }
+    }
+  }
+
+  .shopBottom{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    &>ul{
+      width: 100%;
+      font-size: 0;
+      width: 7.5rem;
+      max-width: 7.5rem;
+      margin: 0 auto;
+      background: #fff;
+      &>li{
+        width: 25%;
+        vertical-align: top;
+        height: .9rem;
+        text-align: center;
+        display: inline-block;
+        div{
+          font-size: .18rem;
+          color: #9B9B9B;
+        }
+        img{
+          width: .5rem;
+          margin-top: 0.05rem;
+          height: .5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (width: 768px){
+  .appload{
+    bottom: 30% !important;
+    //  箭头
+    .appUploadTrue{
+      top: -.1rem !important;
+      &>div{
+        &:after{
+          left: 6px !important;
+        }
+        &:before{
+          right: 4px !important;
+        }
+      }
+      &>div:first-child{
+        top: 0.4rem;
+      }
+      &>div:last-child{
+        top: .6rem;
+      }
+    }
+  }
+}

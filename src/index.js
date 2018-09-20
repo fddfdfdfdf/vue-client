@@ -13,7 +13,7 @@ import Vuex from "vuex"
 import stores from './store/index'
 import router from './router/index'
 
-global.baseStaticUrl = window.initObj.url //设置为全局引用
+global.baseStaticUrl = window.initObj //设置为全局引用
 Vue.prototype.$http = axios.ajax //在vue的原型链上添加axios
 Vue.prototype.$scrollReveal = scrollReveal; //在vue的原型链上添加axios
 Vue.config.productionTip = false
