@@ -52,10 +52,10 @@
                                  _this.$router.push('shop');
                                  break;
                              case 2:
-                                 _this.$router.push('expectedDate');
+                                 _this.$router.push('person/prepare');
                                  break;
                              case 3:
-                                 _this.$router.push('expectedDate');
+                                 _this.$router.push('person/body');
                                  break;
                          }
                  //         alertError(data.data.message[0])

@@ -1,0 +1,77 @@
+.material{
+  width: 100%;
+  height: 100%;
+  //  头部信息
+  .personTitle{
+    height: 80%;
+    width: 6.3rem;
+    margin: 0 auto;
+    border-top: 1px solid transparent;
+    .personDateTitle{
+      font-size: .36rem;
+      margin-top: .8rem;
+      text-align: left;
+      color: #333333;
+    }
+    .personDateCt{
+      font-size: .28rem;
+      color: #999999;
+      text-align: justify;
+      width: 6rem;
+      margin:.18rem 0 .42rem 0;
+    }
+    .personInfor{
+      &>div{
+        display: inline-block;
+        position: relative;
+        left: 0;
+        top: 0;
+        padding: .2rem .3rem;
+        border-radius: 0.05rem;
+        font-size: .28rem;
+        text-align: center;
+        img{
+          position: absolute;
+          right: -.15rem;
+          top: -.15rem;
+          width: .3rem;
+          height: .3rem;
+        }
+      }
+      .diseaseInit{
+        border: 1px solid #979797;
+        color: #9B9B9B;
+        img{
+          display: none;
+        }
+      }
+      .diseaseInited{
+        border: 1px solid #F96772;;
+        color: #F96772;
+        img{
+          display: initial;
+        }
+      }
+    }
+  }
+  //  底部信息
+  .personBottom{
+    height: 20%;
+    text-align: center;
+    button{
+      border-radius: 5px;
+      color: #fff;
+      width: 6rem;
+      height: .9rem;
+      line-height: .9rem;
+      position: relative;
+      top: -.9rem;
+    }
+    .nochecked{
+      background: #EEEEEE;
+    }
+    .checked{
+      background: #F96772;
+    }
+  }
+}
