@@ -27,3 +27,18 @@ html,body{
 }
 
 
+.loadingPin{
+    font-size: 0;
+    margin-left: -.2rem;
+}
+.loadingPin>li{
+     display: inline-block;
+     width: .6rem;
+     margin-left: .2rem;
+     height: .13rem;
+     background: rgba(255,78,105,0.40);
+     border-radius:.07rem;
+ }
+.loadingPin>.active{
+    background: #F96772 !important;
+}
