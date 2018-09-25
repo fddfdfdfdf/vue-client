@@ -12,6 +12,8 @@ const changemenu = () => import(/* webpackChunkName: "changemenu" */ "../compone
 const eat = () => import(/* webpackChunkName: "eat" */ "../components/menu/eat/index");
 const bodymother = () => import(/* webpackChunkName: "bodymother" */ "../components/menu/mother/mother/index");
 const bodys = () => import(/* webpackChunkName: "bodys" */ "../components/menu/mother/body/index");
+const firstLogin = () => import(/* webpackChunkName: "firstLogin" */ "../components/pages/firstlogin/index");
+
 
 export default [
     {
@@ -20,10 +22,15 @@ export default [
         meta:{
             keepAlive:false
         }
-    },
-    {
+    },{
         path:"/changemenu",
         component:changemenu,
+        meta:{
+            keepAlive:false
+        }
+    },{
+        path:"/firstlogin",
+        component:firstLogin,
         meta:{
             keepAlive:false
         }
@@ -83,6 +90,8 @@ export default [
 // const disease = () => import(/* webpackChunkName: "disease" */ "../components/pages/disease/index");
 // const material = () => import(/* webpackChunkName: "material" */ "../components/pages/material/index");
 // const success = () => import(/* webpackChunkName: "success" */ "../components/pages/success/index");
+//const firstLogin = () => import(/* webpackChunkName: "firstLogin" */ "../components/pages/firstlogin/index");
+
 // export default [
 //     {
 //         path:"/",
@@ -90,7 +99,13 @@ export default [
 //         meta:{
 //             keepAlive:false
 //         }
-//     },
+//     },{
+//     path:"/firstlogin",
+//         component:firstLogin,
+//         meta:{
+//             keepAlive:false
+//         }
+//      },
 //     {
 //         path:"/login",
 //         component:login,

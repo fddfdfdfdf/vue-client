@@ -91,6 +91,26 @@
         <div class="btn">
             <button @click="goMyMenu">定制我的营养餐单</button>
         </div>
+        <div class="bodyMoteherFixed">
+            <ul>
+                <li @click="toPage('')">
+                    <img :src="menu" alt="">
+                    <div>餐单</div>
+                </li>
+                <li @click="toPage('shop')">
+                    <img :src="url+'shop/shop.png'" alt="">
+                    <div>商城</div>
+                </li>
+                <li @click="toPage('app')">
+                    <img :src="app" alt="">
+                    <div>孕小二</div>
+                </li>
+                <li @click="toPage('mycenter')">
+                    <img :src="my" alt="">
+                    <div>我的</div>
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
 
@@ -101,7 +121,10 @@
         data(){
             return {
                 kjData:"1827千卡",
-                url:initObj.Baseurl
+                url:initObj.Baseurl,
+                menu:initObj.Baseurl+'shop/menued.png',
+                app:initObj.Baseurl+'shop/second.png',
+                my:initObj.Baseurl+'shop/my.png'
             }
         },
         methods:{
