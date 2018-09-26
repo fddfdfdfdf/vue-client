@@ -28,7 +28,7 @@
              eleDiv.style.display = "none";
              commBg.style.display = "none";
              eleDivDt.innerHTML = "";
-         },1000)
+         },2000)
 }
 
    function goHistory(th) {
@@ -52,16 +52,21 @@
 }
 
    function clearPiker() {
-    if(procreateStatus.pinkers){
-        for(let i in procreateStatus.pinkers){
-            if(procreateStatus.pinkers[i])procreateStatus.pinkers[i].hide();//
-            procreateStatus.pinkers[i]=null;
-        }
-    }
-}
+       let oldArr = document.getElementsByClassName('picker')
+       let oldCover = document.getElementsByClassName('my-picker-cover')
+       if(oldArr.length>=1){
+           for (var i = 0, lens = oldArr.length; i < lens; i++) {
+               document.body.removeChild(oldArr[i])
+               document.body.removeChild(oldCover[i])
+           }
+       }
+
+  }
 
     function isLogin(th) {
-    console.log(th.$store)
+       if(!th.$store.state.isLogin){
+            th.$router.push('/login')
+        }
     }
 
     function judeCss(dom,fun){

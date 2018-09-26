@@ -19,7 +19,8 @@ module.exports = {
         ],
         vueRouter:[
             "fastclick",
-            "vue-router"
+            "axios",
+            "vue-router",
         ],
         app: [
             "./src/index"

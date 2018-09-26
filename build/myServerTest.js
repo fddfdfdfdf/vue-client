@@ -20,7 +20,7 @@ const expressServer = function (app){
             res.json({ custom: 'responsess' });
         });
         // 反向代理
-        app.use('/v2/*', proxy(proxyOption));
+        app.use('/customization/*', proxy(proxyOption));
         // 静态资源路径（执行顺序）//不能放在外面执行
         app.use('/', express.static(reqPath.reqPath("../","static")));
 }

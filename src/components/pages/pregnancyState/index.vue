@@ -6,10 +6,10 @@
         <div class="pregStatus"  data-scroll-reveal="enter left" @click="lifeStatusChecked(1)">
             <img :src="baseUrl+'pregstatus/preged.png'" alt="">
         </div>
-        <div class="pregStatus" data-scroll-reveal="enter right" @click="lifeStatusChecked(2)">
+        <div class="pregStatus" data-scroll-reveal="enter right" @click="lifeStatusChecked(3)">
             <img :src="baseUrl+'pregstatus/topreg.png'" alt="">
         </div>
-        <div class="pregStatus" data-scroll-reveal="enter left" @click="lifeStatusChecked(3)">
+        <div class="pregStatus" data-scroll-reveal="enter left" @click="lifeStatusChecked(2)">
             <img :src="baseUrl+'pregstatus/body.png'" alt="">
         </div>
         <div class="pregStatusHead">
@@ -20,14 +20,18 @@
 
 <script>
     import "./index.less"
-    import {goHistory,alertError} from '../../../common/js/commonAler'
+    import {isLogin,alertError,clearPiker} from '../../../common/js/commonAler'
     export default {
         name: "pregnancy-state",
         data(){
            return{
                isClick:false,
-               baseUrl:initObj.Baseurl
+               baseUrl:initObj.Baseurl,
            }
+        },
+        beforeCreate(){
+            isLogin(this);
+            clearPiker()
         },
         mounted(){
             new this.$scrollReveal({ reset: true });
@@ -51,10 +55,10 @@
                              case 1:
                                  _this.$router.push('shop');
                                  break;
-                             case 2:
+                             case 3:
                                  _this.$router.push('person/prepare');
                                  break;
-                             case 3:
+                             case 2:
                                  _this.$router.push('person/body');
                                  break;
                          }

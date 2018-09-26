@@ -1,7 +1,10 @@
-import {isLogin,isChannel,menuDt,whichObj} from "../actions-type/index"
+import {changeLogin,check} from "../actions-type/index"
 
 export default {
-        [isLogin] (state, value) {
+        [changeLogin] (state, value) {
             state.isLogin = value
+        },
+        [check] (state, value) {
+            state.check = value
         }
 }

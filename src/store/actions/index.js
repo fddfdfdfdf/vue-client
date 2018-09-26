@@ -1,8 +1,11 @@
 
-import {isLogin,isChannel,menuDt,whichObj} from "../actions-type/index"
+import {changeLogin,check} from "../actions-type/index"
 
 export default {
-        [isLogin] ({commit}, value) {
-            commit(isLogin, value)
+        [changeLogin] ({commit}, value) {
+            commit(changeLogin, value)
+        },
+        [check] ({commit}, value) {
+            commit(check, value)
         }
 }

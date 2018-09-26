@@ -6,7 +6,7 @@ import fastclick from 'fastclick'
 fastclick.attach(document.body);
 // import pdSelect from 'pd-select'
 
-import axios  from '../src/common/js/asyncAjax'
+import axios  from 'axios'
 import { Swipe, SwipeItem } from 'vue-swipe';
 import Vuex from "vuex"
 
@@ -14,11 +14,18 @@ import stores from './store/index'
 import router from './router/index'
 
 global.baseStaticUrl = window.initObj //设置为全局引用
-Vue.prototype.$http = axios.ajax //在vue的原型链上添加axios
+Vue.prototype.$http = axios //在vue的原型链上添加axios
 Vue.prototype.$scrollReveal = scrollReveal; //在vue的原型链上添加axios
+Vue.prototype.$device = SMSdk;
+Vue.prototype.$check = myPicker;
 Vue.config.productionTip = false
 
-
+axios.get('/customization/welcome#/login')
+    .then((data)=>{
+        console.log(data.data)
+    }).catch((error)=>{
+        console.log(error)
+    })
 Vue.use(VueRouter)
 Vue.use(Vuex)
 // import ElementUI from 'element-ui';

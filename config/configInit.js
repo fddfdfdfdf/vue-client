@@ -8,9 +8,9 @@ module.exports = {
     },
     //反向代理设置
     proxy:{
-        target: 'http://api.silianmall.com',//http://api.silianmall.com/v2/ecapi.banner.list
+        target: 'https://cmstest.6kena.com',//http://api.silianmall.com/v2/ecapi.banner.list
         pathRewrite: {
-            '^/v2/' : '/v2/' // 重写请求，api/解析为/
+            '^/customization/' : '/customization/' // 重写请求，api/解析为/
         },
         changeOrigin:true
     }
